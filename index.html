@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Cookies - Guia Didático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍪 Exemplo Didático de Cookies em JavaScript</h1>
+        
+        <!-- Seção 1: Criar Cookie -->
+        <div class="section">
+            <h2>1. Criar um Cookie</h2>
+            <div class="form-group">
+                <label for="cookieName">Nome do Cookie:</label>
+                <input type="text" id="cookieName" placeholder="Ex: usuario" value="usuario">
+            </div>
+            <div class="form-group">
+                <label for="cookieValue">Valor do Cookie:</label>
+                <input type="text" id="cookieValue" placeholder="Ex: João Silva" value="João Silva">
+            </div>
+            <div class="form-group">
+                <label for="cookieDays">Dias de Validade:</label>
+                <input type="number" id="cookieDays" placeholder="Ex: 7" value="7" min="1">
+            </div>
+            <button onclick="criarCookie()" class="btn btn-primary">Criar Cookie</button>
+            <p class="info-text">💡 O cookie será salvo e persistirá mesmo após fechar o navegador</p>
+        </div>
+
+        <!-- Seção 2: Visualizar Cookies -->
+        <div class="section">
+            <h2>2. Visualizar Cookies Salvos</h2>
+            <button onclick="exibirCookies()" class="btn btn-info">Mostrar Todos os Cookies</button>
+            <div id="listaCookies" class="cookie-list"></div>
+            <p class="info-text">💡 Aqui você verá todos os cookies armazenados no seu navegador</p>
+        </div>
+
+        <!-- Seção 3: Buscar Cookie Específico -->
+        <div class="section">
+            <h2>3. Buscar um Cookie Específico</h2>
+            <div class="form-group">
+                <label for="cookieSearch">Nome do Cookie:</label>
+                <input type="text" id="cookieSearch" placeholder="Digite o nome do cookie">
+            </div>
+            <button onclick="buscarCookie()" class="btn btn-warning">Buscar</button>
+            <div id="resultado" class="resultado"></div>
+            <p class="info-text">💡 Busca o valor de um cookie específico pelo nome</p>
+        </div>
+
+        <!-- Seção 4: Deletar Cookie -->
+        <div class="section">
+            <h2>4. Deletar um Cookie</h2>
+            <div class="form-group">
+                <label for="cookieDelete">Nome do Cookie a Deletar:</label>
+                <input type="text" id="cookieDelete" placeholder="Digite o nome do cookie" value="usuario">
+            </div>
+            <button onclick="deletarCookie()" class="btn btn-danger">Deletar Cookie</button>
+            <p class="info-text">⚠️ Esta ação remove o cookie do navegador</p>
+        </div>
+
+        <!-- Seção 5: Limpar Todos os Cookies -->
+        <div class="section">
+            <h2>5. Limpar Todos os Cookies</h2>
+            <button onclick="limparTodosCookies()" class="btn btn-danger">Limpar Todos os Cookies</button>
+            <p class="info-text">⚠️ Esta ação remove TODOS os cookies do site</p>
+        </div>
+
+        <!-- Seção 6: Informações sobre Cookies -->
+        <div class="section info-section">
+            <h2>📚 O que é um Cookie?</h2>
+            <p>Um cookie é um pequeno arquivo de texto que o navegador armazena no computador do usuário. É usado para:</p>
+            <ul>
+                <li><strong>Manter dados de login</strong> - Lembrar o usuário logado</li>
+                <li><strong>Preferências do usuário</strong> - Tema escuro, idioma, etc.</li>
+                <li><strong>Rastrear comportamento</strong> - Análise de uso (Google Analytics)</li>
+                <li><strong>Carrinho de compras</strong> - Manter produtos no carrinho</li>
+                <li><strong>Publicidade</strong> - Mostrar anúncios relevantes</li>
+            </ul>
+            <h3>Estrutura de um Cookie:</h3>
+            <pre>document.cookie = "nome=valor; expires=data; path=/; domain=.exemplo.com"</pre>
+            <ul>
+                <li><strong>nome=valor</strong> - Dados do cookie</li>
+                <li><strong>expires</strong> - Quando o cookie expira</li>
+                <li><strong>path</strong> - Em quais páginas o cookie é acessível</li>
+                <li><strong>domain</strong> - Em quais domínios o cookie é acessível</li>
+                <li><strong>secure</strong> - Apenas em conexões HTTPS</li>
+                <li><strong>samesite</strong> - Proteção contra CSRF</li>
+            </ul>
+        </div>
+
+        <!-- Seção 7: Console de Logs -->
+        <div class="section">
+            <h2>📝 Console de Atividades</h2>
+            <div id="console" class="console"></div>
+            <button onclick="limparConsole()" class="btn btn-secondary">Limpar Console</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
