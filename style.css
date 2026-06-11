@@ -1,9 +1,13 @@
+/* Reset básico para toda a página:
+   remove margens e preenchimentos padrões e
+   define o modelo de caixa como border-box para facilitar o controle de largura e altura. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo principal do body: fonte, fundo em degradê, altura mínima e espaçamento interno. */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -12,6 +16,7 @@ body {
     color: #333;
 }
 
+/* Container centralizado que agrupa o conteúdo com fundo branco e sombra. */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -21,6 +26,7 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo do título principal: cor, alinhamento central e sombra de texto. */
 h1 {
     color: #667eea;
     text-align: center;
@@ -29,6 +35,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo dos subtítulos h2: borda à esquerda e espaçamento. */
 h2 {
     color: #764ba2;
     margin: 20px 0 15px 0;
@@ -37,12 +44,14 @@ h2 {
     font-size: 1.5em;
 }
 
+/* Estilo dos títulos menores h3. */
 h3 {
     color: #555;
     margin: 15px 0 10px 0;
     font-size: 1.1em;
 }
 
+/* Blocos de seção com fundo suave, borda e transição suave. */
 .section {
     background: #f8f9fa;
     padding: 20px;
@@ -52,15 +61,18 @@ h3 {
     transition: all 0.3s ease;
 }
 
+/* Efeito hover para as seções, destacando a borda e adicionando sombra. */
 .section:hover {
     border-color: #667eea;
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
 }
 
+/* Espaçamento entre grupos de formulário. */
 .form-group {
     margin-bottom: 15px;
 }
 
+/* Estilo das labels dos campos: bloco, leitura clara e peso de fonte. */
 label {
     display: block;
     margin-bottom: 5px;
@@ -68,6 +80,7 @@ label {
     color: #555;
 }
 
+/* Inputs de texto e número com largura total, borda arredondada e transição. */
 input[type="text"],
 input[type="number"] {
     width: 100%;
@@ -78,6 +91,7 @@ input[type="number"] {
     transition: all 0.3s ease;
 }
 
+/* Foco nos inputs: remove outline e aplica cor e sombra na borda. */
 input[type="text"]:focus,
 input[type="number"]:focus {
     outline: none;
@@ -85,7 +99,7 @@ input[type="number"]:focus {
     box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
 }
 
-/* Botões */
+/* Estilo base para todos os botões, com espaçamento, cantos arredondados e ponteiro. */
 .btn {
     padding: 12px 25px;
     border: none;
@@ -98,57 +112,67 @@ input[type="number"]:focus {
     margin-top: 10px;
 }
 
+/* Botão principal com degradê e texto branco. */
 .btn-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
+/* Hover no botão principal: eleva ligeiramente e adiciona sombra. */
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
 }
 
+/* Botão informativo com outra combinação de degradê. */
 .btn-info {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     color: white;
 }
 
+/* Hover no botão informativo. */
 .btn-info:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(79, 172, 254, 0.3);
 }
 
+/* Botão de aviso com degradê rosa/amarelo e texto escuro. */
 .btn-warning {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     color: #333;
 }
 
+/* Hover no botão de aviso. */
 .btn-warning:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(250, 112, 154, 0.3);
 }
 
+/* Botão de perigo com degradê vermelho. */
 .btn-danger {
     background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
     color: white;
 }
 
+/* Hover no botão de perigo. */
 .btn-danger:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
 }
 
+/* Botão secundário em tons de cinza escuro. */
 .btn-secondary {
     background: linear-gradient(135deg, #868f96 0%, #596164 100%);
     color: white;
 }
 
+/* Hover no botão secundário. */
 .btn-secondary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(134, 143, 150, 0.3);
 }
 
-/* Informações e Resultados */
+/* Texto de informações leves, usado para explicações ou orientações. */
 .info-text {
     color: #667eea;
     font-size: 0.9em;
@@ -156,27 +180,32 @@ input[type="number"]:focus {
     font-style: italic;
 }
 
+/* Seção de informações com fundo em degradê e borda colorida. */
 .info-section {
     background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
     border-color: #667eea;
 }
 
+/* Parágrafos dentro da info-section com boa leitura. */
 .info-section p {
     color: #333;
     line-height: 1.6;
     margin: 10px 0;
 }
 
+/* Listas dentro da info-section com recuo e cor uniforme. */
 .info-section ul {
     margin-left: 20px;
     color: #333;
 }
 
+/* Itens de lista com espaçamento e altura de linha. */
 .info-section li {
     margin: 8px 0;
     line-height: 1.5;
 }
 
+/* Bloco de código estilizado dentro da info-section. */
 .info-section pre {
     background: #fff;
     padding: 15px;
@@ -188,11 +217,12 @@ input[type="number"]:focus {
     border-left: 4px solid #667eea;
 }
 
-/* Lista de Cookies */
+/* Lista de cookies com espaçamento superior. */
 .cookie-list {
     margin-top: 15px;
 }
 
+/* Item de cookie com fundo branco, borda colorida e layout flexível. */
 .cookie-item {
     background: white;
     padding: 12px 15px;
@@ -205,23 +235,26 @@ input[type="number"]:focus {
     transition: all 0.3s ease;
 }
 
+/* Hover em item de cookie: sombra leve e deslocamento para a direita. */
 .cookie-item:hover {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transform: translateX(5px);
 }
 
+/* Texto forte dentro do item de cookie. */
 .cookie-item strong {
     color: #667eea;
     margin-right: 10px;
 }
 
+/* Texto do valor do cookie em fonte monospace, quebrando linhas longas. */
 .cookie-item span {
     color: #666;
     font-family: 'Courier New', monospace;
     word-break: break-all;
 }
 
-/* Resultado */
+/* Caixa de resultado inicial escondida por padrão. */
 .resultado {
     margin-top: 15px;
     padding: 15px;
@@ -229,25 +262,31 @@ input[type="number"]:focus {
     display: none;
 }
 
+/* Classe adicional para mostrar o resultado. */
 .resultado.show {
     display: block;
 }
 
+/* Estilos para resultado de sucesso. */
 .resultado.success {
     background: #d4edda;
     border: 2px solid #28a745;
     color: #155724;
 }
 
+/* Estilos para resultado de erro. */
 .resultado.error {
     background: #f8d7da;
     border: 2px solid #f5c6cb;
     color: #721c24;
 }
 
+/* Estilos para resultado informativo. */
 .resultado.info {
     background: #d1ecf1;
     border: 2px solid #bee5eb;
+    color: #0c5460;
+}
     color: #0c5460;
 }
 
